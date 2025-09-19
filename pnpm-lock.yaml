@@ -30,14 +30,14 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@replyke/comments-social-react-js':
-        specifier: 5.1.6-beta.31
-        version: 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
+        specifier: 5.1.6-beta.36
+        version: 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
       '@replyke/comments-threaded-react-js':
-        specifier: 5.1.6-beta.31
-        version: 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
+        specifier: 5.1.6-beta.36
+        version: 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
       '@replyke/react-js':
-        specifier: 5.1.6-beta.31
-        version: 5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
+        specifier: 5.1.6-beta.36
+        version: 5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
       '@tailwindcss/vite':
         specifier: ^4.1.13
         version: 4.1.13(vite@7.1.5(jiti@2.5.1)(lightningcss@1.30.1))
@@ -812,50 +812,50 @@ packages:
       react-redux:
         optional: true
 
-  '@replyke/comments-social-core@5.1.6-beta.31':
-    resolution: {integrity: sha512-lm1aPLxowqtMN9sFZCJkWozLkD1QeFVOptcV0+1bg5saTMNx1MRRAkmSxd0bbYabg71Mr+RNz59Qjrbcv2ormw==}
+  '@replyke/comments-social-core@5.1.6-beta.36':
+    resolution: {integrity: sha512-Ov/oAYNm7zIZ0sJZSH+ecnfWhYHvD19qHeHmqxYGq0pvVkj2JVeiIJyobuUihq98fA5iHFapRc6B3wA8DFi2cA==}
     peerDependencies:
       '@replyke/core': '>=5'
       react: ^18.0.0 || ^19.0.0
 
-  '@replyke/comments-social-react-js@5.1.6-beta.31':
-    resolution: {integrity: sha512-04lTOqYXn5ZS4SiQH442mQE6yInZf0vZ5ohfUbYg3g4f7issChJDw6m2QfWzOsROC1NhDTZD33P3Jt44+GJd0w==}
+  '@replyke/comments-social-react-js@5.1.6-beta.36':
+    resolution: {integrity: sha512-3OD8sTe6XAqY4MmDwzl8RWWVjNlUhDzIT+ZDU4Zk6tyr3N6zFhvhCvIM2CurBVQ4kfNyvTsVWswJteRnjm4Cpg==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^19.0.0
 
-  '@replyke/comments-threaded-core@5.1.6-beta.31':
-    resolution: {integrity: sha512-NACeNNRhEXMVCmcNqEWYKsQmfnMXT2ijsUgS8RsyNzvLOY1iy9Or5yQKZiNp6mY56bk7gwAfN6FJ1vVUIZkNFQ==}
+  '@replyke/comments-threaded-core@5.1.6-beta.36':
+    resolution: {integrity: sha512-siira9RB/TSLkPAfFnbeecsrC5ZWBG1odjw5ioAc3o+zTysDDo7sMeP/VTrK1bGNjwr924Q5kTCbIKg9purCiA==}
     peerDependencies:
       '@replyke/core': '>=5'
       react: ^18.0.0 || ^19.0.0
 
-  '@replyke/comments-threaded-react-js@5.1.6-beta.31':
-    resolution: {integrity: sha512-GRCniC3nYD7R4TrGanPh1nuBVhE0zHhYQQNcLQ0XO10KbwevN5Smce2mf3yW70tFyFSmaap+T5VPXfAjh8sRzA==}
+  '@replyke/comments-threaded-react-js@5.1.6-beta.36':
+    resolution: {integrity: sha512-uR6JsdivnfPUMASQcknAsd7wiQtqhU6ITVAsVZcXf54OzR2Tt5o0y+M5Y6P6dmTM/W0JOKhnV8ufKZof2Mcm1A==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^19.0.0
 
-  '@replyke/core@5.1.6-beta.31':
-    resolution: {integrity: sha512-/ghYBvJl7YhTy3B5Qd8eu8irVEz39y8WkihWCZ7lXSR5bEyZStFsbg40BFNiwD4zlmWz1Io0JnK7rZaRed6iYg==}
+  '@replyke/core@5.1.6-beta.36':
+    resolution: {integrity: sha512-M7c097xBufKDnPgECBmlWbuUqaAgREnbP07VDeHyqn2YQmihLqCJ37mmIHTyQ2TMHlxarpS9xT9mnNmnzjUB3w==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
-  '@replyke/react-js@5.1.6-beta.31':
-    resolution: {integrity: sha512-u/d8jUvOzJ0dpQMFNc2TbgEpDXV4gwXIhW+CrKy5xPKoE5ZimqU7rGY6MjdBlBujWGanX5C08YvyPoafmeeMTQ==}
+  '@replyke/react-js@5.1.6-beta.36':
+    resolution: {integrity: sha512-b8A62soXrku8RcXIWgreGgpJzQsylZyCSegOZPFurkcaBxZ9SUVcJaT9CZ7sF4bMNsj+Yw/Xp0Vamp1Xzq22RA==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
-  '@replyke/ui-core-react-js@5.1.6-beta.31':
-    resolution: {integrity: sha512-lSeFiei6NIbkIudHkSYgJdbVztppBGZ4gCGfAYJaxB3e2XbYZmq3b8/QZpCpYExz8gM8VTOz/HHYew/GFNm4Sg==}
+  '@replyke/ui-core-react-js@5.1.6-beta.36':
+    resolution: {integrity: sha512-N6ZPfiKPMb+EU/YihBmtJfsbG5Fk8NiaWDxU5mGJWuPO9dQSIQYBtoN1IBz9YysL0CJZM3PCdsvQpzds4vBXEA==}
     peerDependencies:
       '@replyke/core': '>=5'
       moment: ^2
       react: ^18.0.0 || ^19.0.0
       react-dom: ^19.0.0
 
-  '@replyke/ui-core@5.1.6-beta.31':
-    resolution: {integrity: sha512-yLoDDNDXGp5BUTF3wyghLr/EiLatrdt9k68MlBVAtB9kaT35e/OMwWQlGfXA12ocrjaYkCMsR1rdJBLwee3D5w==}
+  '@replyke/ui-core@5.1.6-beta.36':
+    resolution: {integrity: sha512-EiutUnUXauh+QIIPlzRsZ7scOvid/vqY/pjC+QKtl2MN2LKdFR7kjOwAcgFdh7TE5TJq72iuOHFsdoZXcANv8w==}
 
   '@rolldown/pluginutils@1.0.0-beta.35':
     resolution: {integrity: sha512-slYrCpoxJUqzFDDNlvrOYRazQUNRvWPjXA17dAOISY3rDMxX6k8K4cj2H+hEYMHF81HO3uNd5rHVigAWRM5dSg==}
@@ -2742,33 +2742,16 @@ snapshots:
       react: 19.1.1
       react-redux: 9.2.0(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
 
-  '@replyke/comments-social-core@5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)':
+  '@replyke/comments-social-core@5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)':
     dependencies:
-      '@replyke/core': 5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
-      '@replyke/ui-core': 5.1.6-beta.31
+      '@replyke/core': 5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
+      '@replyke/ui-core': 5.1.6-beta.36
       react: 19.1.1
 
-  '@replyke/comments-social-react-js@5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
+  '@replyke/comments-social-react-js@5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
     dependencies:
-      '@replyke/comments-social-core': 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
-      '@replyke/ui-core-react-js': 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-    transitivePeerDependencies:
-      - '@replyke/core'
-      - moment
-      - styled-components
-
-  '@replyke/comments-threaded-core@5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)':
-    dependencies:
-      '@replyke/core': 5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
-      '@replyke/ui-core': 5.1.6-beta.31
-      react: 19.1.1
-
-  '@replyke/comments-threaded-react-js@5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
-    dependencies:
-      '@replyke/comments-threaded-core': 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
-      '@replyke/ui-core-react-js': 5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
+      '@replyke/comments-social-core': 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
+      '@replyke/ui-core-react-js': 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
     transitivePeerDependencies:
@@ -2776,7 +2759,24 @@ snapshots:
       - moment
       - styled-components
 
-  '@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)':
+  '@replyke/comments-threaded-core@5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)':
+    dependencies:
+      '@replyke/core': 5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
+      '@replyke/ui-core': 5.1.6-beta.36
+      react: 19.1.1
+
+  '@replyke/comments-threaded-react-js@5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
+    dependencies:
+      '@replyke/comments-threaded-core': 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
+      '@replyke/ui-core-react-js': 5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+    transitivePeerDependencies:
+      - '@replyke/core'
+      - moment
+      - styled-components
+
+  '@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)':
     dependencies:
       '@reduxjs/toolkit': 2.9.0(react-redux@9.2.0(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
       axios: 1.12.2
@@ -2789,27 +2789,27 @@ snapshots:
       - debug
       - redux
 
-  '@replyke/react-js@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)':
+  '@replyke/react-js@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)':
     dependencies:
-      '@replyke/core': 5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
+      '@replyke/core': 5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
       react: 19.1.1
     transitivePeerDependencies:
       - '@types/react'
       - debug
       - redux
 
-  '@replyke/ui-core-react-js@5.1.6-beta.31(@replyke/core@5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
+  '@replyke/ui-core-react-js@5.1.6-beta.36(@replyke/core@5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1))(moment@2.30.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))':
     dependencies:
       '@giphy/js-fetch-api': 5.7.0
       '@giphy/react-components': 10.1.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
-      '@replyke/core': 5.1.6-beta.31(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
+      '@replyke/core': 5.1.6-beta.36(@types/react@19.1.13)(react@19.1.1)(redux@5.0.1)
       moment: 2.30.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
     transitivePeerDependencies:
       - styled-components
 
-  '@replyke/ui-core@5.1.6-beta.31': {}
+  '@replyke/ui-core@5.1.6-beta.36': {}
 
   '@rolldown/pluginutils@1.0.0-beta.35': {}
 

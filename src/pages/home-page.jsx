@@ -24,6 +24,7 @@ export default function TweetFeed() {
   const { user } = useUser();
 
   const [selectedEntity, setSelectedEntity] = useState(null);
+  const [commentSheetOpen, setCommentSheetOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [content, setContent] = useState("");
   const [sortBy, setSortBy] = useState("new");
@@ -44,12 +45,17 @@ export default function TweetFeed() {
 
   function handleSelectEntity(ent) {
     setSelectedEntity(ent);
+    setCommentSheetOpen(true);
   }
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <Sheet>
-        <CommentSectionSheet entity={selectedEntity} />
+        <CommentSectionSheet
+          entity={selectedEntity}
+          open={commentSheetOpen}
+          onOpenChange={setCommentSheetOpen}
+        />
         <div className="max-w-2xl mx-auto bg-white shadow-sm border-x border-gray-200">
           {user && (
             <div className="p-4 bg-white">

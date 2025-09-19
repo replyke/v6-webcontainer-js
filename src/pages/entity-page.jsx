@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, useSearchParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { EntityProvider, useFetchEntityByShortId } from "@replyke/react-js";
 import Tweet from "../components/tweet";
@@ -10,7 +10,6 @@ import { Button } from "../components/ui/button";
 export default function EntityPage() {
   const { shortId } = useParams();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
   const fetchEntityByShortId = useFetchEntityByShortId();
 
   const [entity, setEntity] = useState(null);
@@ -18,7 +17,6 @@ export default function EntityPage() {
   const [error, setError] = useState(null);
   const [selectedEntity, setSelectedEntity] = useState(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [highlightedCommentId, setHighlightedCommentId] = useState(null);
 
   useEffect(() => {
     if (!shortId) {
@@ -46,14 +44,6 @@ export default function EntityPage() {
 
     loadEntity();
   }, [shortId, fetchEntityByShortId]);
-
-  useEffect(() => {
-    const commentId = searchParams.get("commentId");
-    if (commentId) {
-      setIsSheetOpen(true);
-      setHighlightedCommentId(commentId);
-    }
-  }, [searchParams]);
 
   const handleBackToHome = () => {
     navigate("/");
@@ -119,7 +109,6 @@ export default function EntityPage() {
         entity={selectedEntity}
         open={isSheetOpen}
         onOpenChange={setIsSheetOpen}
-        highlightedCommentId={highlightedCommentId}
       />
       <div className="max-w-2xl mx-auto bg-white shadow-sm border-x border-gray-200">
         <div className="p-4 border-b border-gray-100">
