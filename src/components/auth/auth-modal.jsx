@@ -99,10 +99,10 @@ export default function UsernameModal({ isOpen, onClose }) {
       </form>
 
       <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-lg">
-        <p className="text-xs text-gray-600 mb-2">
+        <p className="text-sm text-gray-600 mb-2">
           <strong>Good to know:</strong>
         </p>
-        <ul className="text-xs text-gray-600 space-y-1">
+        <ul className="text-sm text-gray-600 space-y-1">
           <li>
             • You can reuse a username you've used before if you want to
             test interactivity between different users
