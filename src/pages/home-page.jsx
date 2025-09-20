@@ -18,8 +18,6 @@ export default function TweetFeed() {
     loadMore,
   } = useEntityList({
     listId: "home-tweets", // Filers at the store level
-    sourceId: "tweets", // Filters at the DB level
-    limit: 10, // Batch size
   });
   const { user } = useUser();
 
@@ -36,7 +34,14 @@ export default function TweetFeed() {
     if (content.length) {
       filters.contentFilters = { includes: [content] };
     }
-    fetchEntities(filters, { resetUnspecified: true, clearImmediately: false });
+    fetchEntities(
+      filters,
+      {
+        sourceId: "tweets", // Filters at the DB level
+        limit: 10, // Batch size
+      },
+      { resetUnspecified: true, clearImmediately: false }
+    );
   }, [sortBy, timeFrame, content]);
 
   function handleShowAuthModal() {
@@ -91,7 +96,7 @@ export default function TweetFeed() {
               <button
                 onClick={loadMore}
                 disabled={loadingEntities}
-                className="px-6 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+                className="px-4 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
               >
                 {loadingEntities ? "Loading..." : "Load more"}
               </button>

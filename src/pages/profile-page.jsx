@@ -33,8 +33,6 @@ export default function ProfilePage() {
     loadMore,
   } = useEntityList({
     listId: "profile-tweets-" + userId,
-    sourceId: "tweets",
-    limit: 10,
   });
 
   const [selectedEntity, setSelectedEntity] = useState(null);
@@ -65,7 +63,14 @@ export default function ProfilePage() {
       filters.contentFilters = { includes: [content] };
     }
 
-    fetchEntities(filters, { resetUnspecified: true, clearImmediately: false });
+    fetchEntities(
+      filters,
+      {
+        sourceId: "tweets",
+        limit: 10,
+      },
+      { resetUnspecified: true, clearImmediately: false }
+    );
   }, [userId, sortBy, timeFrame, content]);
 
   useEffect(() => {
@@ -344,15 +349,16 @@ export default function ProfilePage() {
                       <button
                         onClick={toggleFollow}
                         disabled={isLoading}
-                        className={"px-4 py-2 text-sm font-medium rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer " + (
-                          isLoading || isFollowing
+                        className={
+                          "px-4 py-2 text-sm font-medium rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer " +
+                          (isLoading || isFollowing
                             ? "text-gray-800 hover:bg-gray-300 border border-gray-300"
-                            : "text-white hover:bg-blue-700"
-                        ) + " " + (
-                          isLoading || isFollowing
+                            : "text-white hover:bg-blue-700") +
+                          " " +
+                          (isLoading || isFollowing
                             ? "bg-gray-200"
-                            : "bg-blue-600"
-                        )}
+                            : "bg-blue-600")
+                        }
                       >
                         {isFollowing ? "Following" : "Follow"}
                       </button>
@@ -399,7 +405,7 @@ export default function ProfilePage() {
               <button
                 onClick={loadMore}
                 disabled={loadingEntities}
-                className="px-6 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+                className="px-4 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
               >
                 {loadingEntities ? "Loading..." : "Load more"}
               </button>
