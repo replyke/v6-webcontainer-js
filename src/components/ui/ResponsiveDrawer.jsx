@@ -24,7 +24,7 @@ export function ResponsiveDrawer({
   onOpenChange,
   trigger,
 }) {
-  const isDesktop = useMediaQuery("(min-width: 640px)");
+  const isDesktop = useMediaQuery("(min-width: 720px)");
 
   if (isDesktop) {
     return (
