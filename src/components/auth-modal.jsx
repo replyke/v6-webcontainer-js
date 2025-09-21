@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Shuffle } from "lucide-react";
-import { useAuth } from "../../context/use-auth";
-import { ResponsiveDrawer } from "../ui/ResponsiveDrawer";
+import { useAuth } from "../context/use-auth";
+import { ResponsiveDrawer } from "./ui/ResponsiveDrawer";
 
 export default function UsernameModal({ isOpen, onClose }) {
   const [username, setUsername] = useState("");

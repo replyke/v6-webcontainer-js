@@ -3,7 +3,7 @@ import { EntityProvider, useEntityList, useUser } from "@replyke/react-js";
 import Tweet from "../components/tweet";
 import TweetComposer from "../components/tweet-composer";
 import UserProfile from "../components/user-profile";
-import UsernameModal from "../components/auth/auth-modal";
+import UsernameModal from "../components/auth-modal";
 import LoadingPlaceholder from "../components/loading-placeholder";
 import Filters from "../components/filters";
 import { Sheet } from "../components/ui/sheet";

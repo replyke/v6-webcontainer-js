@@ -18,7 +18,7 @@ import { cn } from "../lib/utils";
 
 const ReportPostSheet = ({ setShowReportPostDialog, entity }) => {
   const { user } = useUser();
-  const { createEntityReport } = useCreateReport();
+  const createEntityReport = useCreateReport({ type: "comment" });
 
   const [submitting, setSubmitting] = useState(false);
   const [reason, setReason] = useState(null);

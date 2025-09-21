@@ -9,7 +9,7 @@ import {
 } from "@replyke/react-js";
 import { ArrowLeft, Edit2, Check, X, Calendar, UserIcon } from "lucide-react";
 import Tweet from "../components/tweet";
-import UsernameModal from "../components/auth/auth-modal";
+import UsernameModal from "../components/auth-modal";
 import LoadingPlaceholder from "../components/loading-placeholder";
 import Filters from "../components/filters";
 import { Sheet } from "../components/ui/sheet";
