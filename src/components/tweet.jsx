@@ -245,34 +245,44 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
               </span>
             </button>
           </div>
-          <ResponsiveDrawer
-            open={isBookmarkDrawerOpen}
-            onOpenChange={setIsBookmarkDrawerOpen}
-            title="Add to Collection"
-            trigger={
-              <button
-                onClick={handleBookmarkClick}
-                className={"flex items-center space-x-1.5 transition-all group cursor-pointer " + (
-                  isEntitySaved
-                    ? "text-blue-600"
-                    : "text-gray-400 hover:text-blue-600"
-                )}
-              >
-                <div
-                  className={"p-1.5 rounded-full transition-all " + (
-                    isEntitySaved ? "bg-blue-100" : "group-hover:bg-blue-50"
+          {user ? (
+            <ResponsiveDrawer
+              open={isBookmarkDrawerOpen}
+              onOpenChange={setIsBookmarkDrawerOpen}
+              title="Add to Collection"
+              trigger={
+                <button
+                  className={"flex items-center space-x-1.5 transition-all group cursor-pointer " + (
+                    isEntitySaved
+                      ? "text-blue-600"
+                      : "text-gray-400 hover:text-blue-600"
                   )}
                 >
-                  <Bookmark
-                    size={14}
-                    fill={isEntitySaved ? "currentColor" : "none"}
-                  />
-                </div>
-              </button>
-            }
-          >
-            <CollectionsDialog setIsEntitySaved={setIsEntitySaved} />
-          </ResponsiveDrawer>
+                  <div
+                    className={"p-1.5 rounded-full transition-all " + (
+                      isEntitySaved ? "bg-blue-100" : "group-hover:bg-blue-50"
+                    )}
+                  >
+                    <Bookmark
+                      size={14}
+                      fill={isEntitySaved ? "currentColor" : "none"}
+                    />
+                  </div>
+                </button>
+              }
+            >
+              <CollectionsDialog setIsEntitySaved={setIsEntitySaved} />
+            </ResponsiveDrawer>
+          ) : (
+            <button
+              onClick={handleBookmarkClick}
+              className="flex items-center space-x-1.5 transition-all group cursor-pointer text-gray-400 hover:text-blue-600"
+            >
+              <div className="p-1.5 rounded-full transition-all group-hover:bg-blue-50">
+                <Bookmark size={14} />
+              </div>
+            </button>
+          )}
         </div>
       </div>
 
