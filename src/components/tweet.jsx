@@ -118,7 +118,10 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
             </UserHoverCard>
             <div className="flex items-center space-x-2 pb-0.5">
               <UserHoverCard userId={entity?.user?.id || ""}>
-                <Link to={"/u/" + (entity?.user?.id || "")} className="hover:underline">
+                <Link
+                  to={"/u/" + (entity?.user?.id || "")}
+                  className="hover:underline"
+                >
                   <span className="font-semibold text-gray-900 text-sm">
                     @{entity?.user?.username}
                   </span>
@@ -183,16 +186,18 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
                   upvoteEntity?.();
                 }
               }}
-              className={"flex items-center space-x-1.5 transition-all group cursor-pointer " + (
-                userUpvotedEntity
+              className={
+                "flex items-center space-x-1.5 transition-all group cursor-pointer " +
+                (userUpvotedEntity
                   ? "text-blue-600"
-                  : "text-gray-400 hover:text-blue-600"
-              )}
+                  : "text-gray-400 hover:text-blue-600")
+              }
             >
               <div
-                className={"p-1.5 rounded-full transition-all " + (
-                  userUpvotedEntity ? "bg-blue-100" : "group-hover:bg-blue-50"
-                )}
+                className={
+                  "p-1.5 rounded-full transition-all " +
+                  (userUpvotedEntity ? "bg-blue-100" : "group-hover:bg-blue-50")
+                }
               >
                 <ThumbsUp size={14} />
               </div>
@@ -213,16 +218,18 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
                   downvoteEntity?.();
                 }
               }}
-              className={"flex items-center space-x-1.5 transition-all group cursor-pointer " + (
-                userDownvotedEntity
+              className={
+                "flex items-center space-x-1.5 transition-all group cursor-pointer " +
+                (userDownvotedEntity
                   ? "text-red-600"
-                  : "text-gray-400 hover:text-red-600"
-              )}
+                  : "text-gray-400 hover:text-red-600")
+              }
             >
               <div
-                className={"p-1.5 rounded-full transition-all " + (
-                  userDownvotedEntity ? "bg-red-100" : "group-hover:bg-red-50"
-                )}
+                className={
+                  "p-1.5 rounded-full transition-all " +
+                  (userDownvotedEntity ? "bg-red-100" : "group-hover:bg-red-50")
+                }
               >
                 <ThumbsDown size={14} />
               </div>
@@ -232,9 +239,7 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
             </button>
 
             <button
-              onClick={() =>
-                !user ? onAuthRequired() : handleSelectEntity(entity)
-              }
+              onClick={() => handleSelectEntity(entity)}
               className="flex items-center space-x-1.5 text-gray-400 hover:text-green-600 transition-all group cursor-pointer"
             >
               <div className="p-1.5 rounded-full group-hover:bg-green-50 transition-all">
@@ -252,16 +257,18 @@ export default function Tweet({ onAuthRequired, handleSelectEntity }) {
               title="Add to Collection"
               trigger={
                 <button
-                  className={"flex items-center space-x-1.5 transition-all group cursor-pointer " + (
-                    isEntitySaved
+                  className={
+                    "flex items-center space-x-1.5 transition-all group cursor-pointer " +
+                    (isEntitySaved
                       ? "text-blue-600"
-                      : "text-gray-400 hover:text-blue-600"
-                  )}
+                      : "text-gray-400 hover:text-blue-600")
+                  }
                 >
                   <div
-                    className={"p-1.5 rounded-full transition-all " + (
-                      isEntitySaved ? "bg-blue-100" : "group-hover:bg-blue-50"
-                    )}
+                    className={
+                      "p-1.5 rounded-full transition-all " +
+                      (isEntitySaved ? "bg-blue-100" : "group-hover:bg-blue-50")
+                    }
                   >
                     <Bookmark
                       size={14}

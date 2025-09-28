@@ -17,7 +17,7 @@ import {
   TabsTrigger,
 } from "../components/ui/tabs";
 
-function CommentSectionSheet({ entity, open, onOpenChange }) {
+function CommentSectionSheet({ entity, open, onOpenChange, onAuthRequired }) {
   const [searchParams] = useSearchParams();
 
   const [highlightedCommentId, setHighlightedCommentId] = useState(null);
@@ -50,26 +50,18 @@ function CommentSectionSheet({ entity, open, onOpenChange }) {
             <ThreadedCommentSection
               entity={entity}
               highlightedCommentId={highlightedCommentId}
-              callbacks={
-                {
-                  // loginRequiredCallback: () => {
-                  //   toast("Please log in first");
-                  // },
-                }
-              }
+              callbacks={{
+                loginRequiredCallback: onAuthRequired,
+              }}
             />
           </TabsContent>
           <TabsContent value="social">
             <SocialCommentSection
               entity={entity}
               highlightedCommentId={highlightedCommentId}
-              callbacks={
-                {
-                  // loginRequiredCallback: () => {
-                  //   toast("Please log in first");
-                  // },
-                }
-              }
+              callbacks={{
+                loginRequiredCallback: onAuthRequired,
+              }}
             />
           </TabsContent>
         </Tabs>

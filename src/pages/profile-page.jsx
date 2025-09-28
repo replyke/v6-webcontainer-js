@@ -162,6 +162,7 @@ export default function ProfilePage() {
           entity={selectedEntity}
           open={commentSheetOpen}
           onOpenChange={setCommentSheetOpen}
+          onAuthRequired={handleShowAuthModal}
         />
         <div className="max-w-2xl mx-auto bg-white shadow-sm border-x border-gray-200">
           {/* Header with back button */}

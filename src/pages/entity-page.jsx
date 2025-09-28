@@ -6,6 +6,7 @@ import Tweet from "../components/tweet";
 import LoadingPlaceholder from "../components/loading-placeholder";
 import CommentSectionSheet from "../components/comment-section-sheet";
 import { Button } from "../components/ui/button";
+import { Sheet } from "@/components/ui/sheet";
 
 export default function EntityPage() {
   const { shortId } = useParams();
@@ -16,7 +17,8 @@ export default function EntityPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedEntity, setSelectedEntity] = useState(null);
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [commentSheetOpen, setCommentSheetOpen] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   useEffect(() => {
     if (!shortId) {
@@ -49,9 +51,13 @@ export default function EntityPage() {
     navigate("/");
   };
 
+  function handleShowAuthModal() {
+    setShowAuthModal(true);
+  }
+
   const handleSelectEntity = (ent) => {
     setSelectedEntity(ent);
-    setIsSheetOpen(true);
+    setCommentSheetOpen(true);
   };
 
   if (loading) {
@@ -105,33 +111,40 @@ export default function EntityPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <CommentSectionSheet
-        entity={selectedEntity}
-        open={isSheetOpen}
-        onOpenChange={setIsSheetOpen}
-      />
-      <div className="max-w-2xl mx-auto bg-white shadow-sm border-x border-gray-200">
-        <div className="p-4 border-b border-gray-100">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleBackToHome}
-            className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
-          >
-            <ArrowLeft size={16} />
-            <span>Back to Home</span>
-          </Button>
-        </div>
+      <Sheet>
+        <CommentSectionSheet
+          entity={selectedEntity}
+          open={commentSheetOpen}
+          onOpenChange={setCommentSheetOpen}
+          onAuthRequired={handleShowAuthModal}
+        />
+        <div className="max-w-2xl mx-auto bg-white shadow-sm border-x border-gray-200">
+          <div className="p-4 border-b border-gray-100">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleBackToHome}
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+            >
+              <ArrowLeft size={16} />
+              <span>Back to Home</span>
+            </Button>
+          </div>
 
-        <EntityProvider entity={entity}>
-          <Tweet
-            onAuthRequired={() => {
-              /* Auth modal could be added here if needed */
-            }}
-            handleSelectEntity={handleSelectEntity}
-          />
-        </EntityProvider>
-      </div>
+          <EntityProvider entity={entity}>
+            <Tweet
+              onAuthRequired={() => {
+                /* Auth modal could be added here if needed */
+              }}
+              handleSelectEntity={handleSelectEntity}
+            />
+          </EntityProvider>
+        </div>
+        <UsernameModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+        />
+      </Sheet>
     </div>
   );
 }
