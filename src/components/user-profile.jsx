@@ -89,7 +89,7 @@ export default function UserProfile() {
 
           <button
             onClick={handleSignOut}
-            className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50"
+            className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50 cursor-pointer"
           >
             <LogOut size={14} />
             <span className="text-xs font-medium">Sign out</span>

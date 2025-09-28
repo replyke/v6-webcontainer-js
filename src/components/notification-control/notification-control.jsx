@@ -273,7 +273,7 @@ function NotificationControl({ notificationTemplates, theme = "auto" }) {
             {unreadAppNotificationsCount > 0 && (
               <button
                 onClick={markAllNotificationsAsRead}
-                className="bg-transparent border-none p-1 text-xs cursor-pointer rounded flex items-center transition-colors duration-200 hover:opacity-80"
+                className="bg-transparent border-none p-1 text-xs cursor-pointer rounded flex items-center transition-colors duration-200 hover:opacity-80 cursor-pointer"
                 style={{
                   color: colors.textMuted,
                 }}
