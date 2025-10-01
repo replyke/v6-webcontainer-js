@@ -16,11 +16,18 @@ import {
   TabsList,
   TabsTrigger,
 } from "../components/ui/tabs";
+import { useMemo } from "react";
 
 function CommentSectionSheet({ entity, open, onOpenChange, onAuthRequired }) {
   const [searchParams] = useSearchParams();
 
   const [highlightedCommentId, setHighlightedCommentId] = useState(null);
+
+  const callbacks = useMemo(() => {
+    return {
+      loginRequiredCallback: onAuthRequired,
+    };
+  }, []);
 
   useEffect(() => {
     const commentId = searchParams.get("commentId");
@@ -50,18 +57,14 @@ function CommentSectionSheet({ entity, open, onOpenChange, onAuthRequired }) {
             <ThreadedCommentSection
               entity={entity}
               highlightedCommentId={highlightedCommentId}
-              callbacks={{
-                loginRequiredCallback: onAuthRequired,
-              }}
+              callbacks={callbacks}
             />
           </TabsContent>
           <TabsContent value="social">
             <SocialCommentSection
               entity={entity}
               highlightedCommentId={highlightedCommentId}
-              callbacks={{
-                loginRequiredCallback: onAuthRequired,
-              }}
+              callbacks={callbacks}
             />
           </TabsContent>
         </Tabs>
