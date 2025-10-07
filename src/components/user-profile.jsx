@@ -51,50 +51,48 @@ export default function UserProfile() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-gray-100 rounded-xl p-4">
-      <div className="flex items-center justify-between">
-        <Link
-          to={"/u/" + user.id}
-          className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
-        >
-          <img
-            src={getUserAvatar(user.id)}
-            className="w-10 h-10 rounded-full bg-white shadow-lg"
-          />
-          <div>
-            <p className="font-semibold text-gray-900 text-sm">
-              {user.username}
-            </p>
-            <p className="text-xs text-gray-600">Demo user</p>
-          </div>
-        </Link>
-
-        <div className="flex items-center space-x-2">
-          <ResponsiveDrawer
-            title="My Collections"
-            trigger={
-              <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50 border border-blue-200 cursor-pointer">
-                <FolderOpen size={14} />
-                <span className="text-xs font-medium">My collections</span>
-              </button>
-            }
-          >
-            <CollectionsExplorer />
-          </ResponsiveDrawer>
-
-          <NotificationControl
-            notificationTemplates={notificationTemplates}
-            theme="light"
-          />
-
-          <button
-            onClick={handleSignOut}
-            className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50 cursor-pointer"
-          >
-            <LogOut size={14} />
-            <span className="text-xs font-medium">Sign out</span>
-          </button>
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-gray-100 rounded-xl p-4 flex flex-col-reverse gap-4 md:flex-row md:items-center justify-between">
+      <Link
+        to={"/u/" + user.id}
+        className="flex items-center space-x-3 hover:opacity-80 transition-opacity w-max whitespace-nowrap"
+      >
+        <img
+          src={getUserAvatar(user.id)}
+          className="size-8 md:size-10 rounded-full bg-white shadow-lg"
+        />
+        <div>
+          <p className="font-semibold text-gray-900 text-sm">{user.username}</p>
+          <p className="text-xs text-gray-600">Demo user</p>
         </div>
+      </Link>
+
+      <div className="flex items-center space-x-2">
+        <ResponsiveDrawer
+          title="My Collections"
+          trigger={
+            <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50 border border-blue-200 cursor-pointer">
+              <FolderOpen size={14} />
+              <span className="text-xs font-medium">My collections</span>
+            </button>
+          }
+        >
+          <CollectionsExplorer />
+        </ResponsiveDrawer>
+
+        <NotificationControl
+          notificationTemplates={notificationTemplates}
+          theme="light"
+        />
+
+        <div className="flex-1" />
+
+        <button
+          onClick={handleSignOut}
+          className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50 cursor-pointer"
+        >
+          <LogOut size={14} />
+          <span className="text-xs font-medium">Sign out</span>
+        </button>
       </div>
     </div>
   );
